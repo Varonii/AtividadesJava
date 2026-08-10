@@ -2,7 +2,7 @@ package ex1a6;
 
 public class ex1 {
     public static void main(String[] args) {
-        mostraProduto("KitKat",4, 100);
+        mostraProduto("KitKat", 4, 100);
     }
 
     public static void mostraProduto(String nome, double preco, int quant){
