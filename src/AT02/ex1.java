@@ -1,6 +1,6 @@
-package ex1a6;
+package AT02;
 
-public class ex4 {
+public class ex1 {
     public static void main(String[] args) {
         double soma = notas(60, 70, 80);
         double media = mediaNotas(soma);

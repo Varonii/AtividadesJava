@@ -1,3 +1,5 @@
+package AT04.ex3;
+
 public class ex3Veiculo {
     String modelo;
     String marca;

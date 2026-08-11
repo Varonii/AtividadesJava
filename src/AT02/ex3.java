@@ -1,6 +1,6 @@
-package ex1a6;
+package AT02;
 
-public class ex6 {
+public class ex3 {
     public static void main(String[] args) {
         mostrarRelatório();
     }

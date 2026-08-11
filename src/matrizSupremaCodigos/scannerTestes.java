@@ -1,3 +1,5 @@
+package MatrizSupremaCodigos;
+
 import java.util.Scanner;
 public class scannerTestes {
     public static void main(String[] args) {

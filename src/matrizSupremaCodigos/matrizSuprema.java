@@ -1,3 +1,5 @@
+package matrizSuprema;
+
 import java.util.Scanner;
 public class matrizSuprema {
     public static void main(String[] args) {

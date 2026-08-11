@@ -1,4 +1,4 @@
-package ex1a6;
+package AT01;
 
 public class ex1 {
     public static void main(String[] args) {

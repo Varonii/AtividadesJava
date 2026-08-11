@@ -1,3 +1,5 @@
+package AT04.ex1;
+
 public class ex1Produto {
     String nome;
     double preco;

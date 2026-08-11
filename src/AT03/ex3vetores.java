@@ -1,4 +1,4 @@
-package exVetores;
+package AT03;
 
 public class ex3vetores {
     static void main() {

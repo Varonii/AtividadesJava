@@ -1,6 +1,6 @@
-package ex1a6;
+package AT02;
 
-public class ex5 {
+public class ex2 {
     public static void main(String[] args) {
 
         String dados = mostrarConsumo("João", 100);
