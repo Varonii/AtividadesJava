@@ -1,19 +1,16 @@
 package AT04.ex2;
 
 public class ex2ContaBancaria {
-    // Atributos
     String titular;
     String numeroConta;
     double saldo;
 
-    // Construtor
     public ex2ContaBancaria(String titular, String numeroConta, double saldoInicial) {
         this.titular = titular;
         this.numeroConta = numeroConta;
         this.saldo = saldoInicial;
     }
 
-    // Método para depositar dinheiro
     public void depositar(double valor) {
         if (valor > 0) {
             saldo += valor;
@@ -23,7 +20,6 @@ public class ex2ContaBancaria {
         }
     }
 
-    // Método para sacar dinheiro (verifica se há saldo suficiente)
     public void sacar(double valor) {
         if (valor <= saldo) {
             saldo -= valor;
@@ -33,7 +29,6 @@ public class ex2ContaBancaria {
         }
     }
 
-    // Método para exibir o saldo atual
     public void mostrarSaldo() {
         System.out.println("----------------------------------------");
         System.out.println("Titular: " + titular);
