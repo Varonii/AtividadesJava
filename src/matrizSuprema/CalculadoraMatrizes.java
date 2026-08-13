@@ -88,6 +88,27 @@ public class CalculadoraMatrizes {
                         }
                     }
 
+                    sc.nextLine();
+                    System.out.print("\nPressione [ENTER] para ver o resultado");
+                    sc.nextLine();
+
+                    System.out.println("--- Matriz A: " + linhaA + "x" + colunaA + " ---");
+                    for (int i = 0; i < linhaA; i++) {
+                        for (int j = 0; j < colunaA; j++) {
+                            System.out.print(matrizA[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+
+                    System.out.println("--- Matriz B: " + linhaB + "x" + colunaB + " ---");
+                    for (int i = 0; i < linhaB; i++) {
+                        for (int j = 0; j < colunaB; j++) {
+                            System.out.print(matrizB[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+
+                    System.out.println("--- Matriz Resultado: " + linhaB + "x" + colunaB + " ---");
                     for (int i = 0; i < linhaA; i++) {
                         for (int j = 0; j < colunaA; j++) {
                             System.out.print(matrizC[i][j] + " ");
@@ -111,7 +132,7 @@ public class CalculadoraMatrizes {
                 int colunaB = sc.nextInt();
 
                 if (linhaA != linhaB || colunaA != colunaB) {
-                    System.out.println("Erro: Só é possível subtrair matrizes com as mesmas dimensões!");
+                    System.out.println("Erro: Só é possível somar matrizes com as mesmas dimensões!");
                 } else {
 
                     for (int i = 0; i < linhaA; i++) {
@@ -135,12 +156,83 @@ public class CalculadoraMatrizes {
                         }
                     }
 
+                    sc.nextLine();
+                    System.out.print("\nPressione [ENTER] para ver o resultado");
+                    sc.nextLine();
+
+                    System.out.println("--- Matriz A: " + linhaA + "x" + colunaA + " ---");
+                    for (int i = 0; i < linhaA; i++) {
+                        for (int j = 0; j < colunaA; j++) {
+                            System.out.print(matrizA[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+
+                    System.out.println("--- Matriz B: " + linhaB + "x" + colunaB + " ---");
+                    for (int i = 0; i < linhaB; i++) {
+                        for (int j = 0; j < colunaB; j++) {
+                            System.out.print(matrizB[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+
+                    System.out.println("--- Matriz Resultado: " + linhaB + "x" + colunaB + " ---");
                     for (int i = 0; i < linhaA; i++) {
                         for (int j = 0; j < colunaA; j++) {
                             System.out.print(matrizC[i][j] + " ");
                         }
                         System.out.println();
                     }
+                }
+                break;
+            }
+
+            case 4: {
+                System.out.print("Digite o quantidade de linhas da matriz: ");
+                int linha = sc.nextInt();
+                System.out.print("Digite o quantidade de colunas da matriz: ");
+                int coluna = sc.nextInt();
+                int[][] matrizA = new int[linha][coluna];
+                System.out.print("Digite o escalar da matriz: ");
+                int escalar = sc.nextInt();
+                int montarMatriz = 0;
+
+                int[][] matriz = new int[linha][coluna];
+                int[][] matrizEscalar = new int[linha][coluna];
+
+                for (int i = 0; i < linha; i++){
+                    for (int j = 0; j < coluna; j++){
+                        System.out.print("Digite o valor da posição " + i + " " + j + ": ");
+                        matriz[i][j] = sc.nextInt();
+                    }
+                }
+
+                sc.nextLine();
+                System.out.print("\nPressione [ENTER] para ver o resultado");
+                sc.nextLine();
+
+                System.out.println("---  Matriz " + linha + "x" + coluna + "  ---");
+
+                for(int i = 0; i < linha; i++){
+                    for(int j = 0; j < coluna; j++){
+                        System.out.print(matriz[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+
+                for (int i = 0; i < linha; i++){
+                    for(int j = 0; j < coluna; j++){
+                        matrizEscalar[i][j] = matriz[i][j] * escalar;
+                    }
+                }
+                System.out.println("\n");
+                System.out.println("---  Matriz " + linha + "x" + coluna + " Escalada por: " + escalar + "  ---");
+
+                for(int i = 0; i < linha; i++){
+                    for(int j = 0; j < coluna; j++){
+                        System.out.print(matrizEscalar[i][j] + " ");
+                    }
+                    System.out.println();
                 }
                 break;
             }
