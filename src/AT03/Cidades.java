@@ -1,6 +1,6 @@
 package AT03;
 
-public class ex1vetores {
+public class Cidades {
     public static void main(String[] args) {
         String[] cidades = new String[4];
 

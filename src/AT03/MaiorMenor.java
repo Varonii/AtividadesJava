@@ -1,6 +1,6 @@
 package AT03;
 
-public class ex3vetores {
+public class MaiorMenor {
     static void main() {
         int[] n = new int[8];
 

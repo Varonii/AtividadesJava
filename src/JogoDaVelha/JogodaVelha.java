@@ -2,7 +2,7 @@ package JogoDaVelha;
 
 import java.util.Scanner;
 
-public class jogodaVelha {
+public class JogodaVelha {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char[][] tabuleiro = new char[3][3];

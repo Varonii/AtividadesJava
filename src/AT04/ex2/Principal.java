@@ -2,7 +2,7 @@ package AT04.ex2;
 
 public class Principal {
     public static void main(String[] args) {
-        ex2ContaBancaria conta = new ex2ContaBancaria("Maria Silva", "12345-6", 500.00);
+        ContaBancaria conta = new ContaBancaria("Maria Silva", "12345-6", 500.00);
 
         conta.mostrarSaldo();
 

@@ -1,6 +1,6 @@
 package AT03;
 
-public class ex2vetores {
+public class Soma {
     public static void main(String[] args) {
         int[] n = new int[6];
         int soma = 0;
