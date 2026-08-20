@@ -1,4 +1,4 @@
-package AT04.ex3;
+package AT05.ex3;
 
 public class Temperatura {
     private String nomeCidade;

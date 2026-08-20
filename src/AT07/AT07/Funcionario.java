@@ -1,4 +1,4 @@
-package AT07;
+package AT07.AT07;
 
 public class Funcionario {
     private String nome;
@@ -6,9 +6,9 @@ public class Funcionario {
     private double salarioBase;
 
     public Funcionario(String nome, int matricula, double salarioBase) {
-        this.nome = nome;
-        this.matricula = matricula;
-        this.salarioBase = salarioBase;
+        setNome(nome);
+        setMatricula(matricula);
+        setSalarioBase(salarioBase);
     }
 
     public String getNome() {
@@ -16,7 +16,12 @@ public class Funcionario {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome != null && !nome.trim().isEmpty()) {
+            this.nome = nome;
+        } else {
+            System.out.println("ERRO: O nome não pode ficar vazio.");
+            this.nome = "Sem Nome";
+        }
     }
 
     public int getMatricula() {
@@ -24,7 +29,11 @@ public class Funcionario {
     }
 
     public void setMatricula(int matricula) {
-        this.matricula = matricula;
+        if (matricula > 0) {
+            this.matricula = matricula;
+        } else {
+            System.out.println("ERRO: A matrícula deve ser maior que zero.");
+        }
     }
 
     public double getSalarioBase() {
@@ -32,23 +41,21 @@ public class Funcionario {
     }
 
     public void setSalarioBase(double salarioBase) {
-        if (salarioBase <= 0){
-            System.out.println("ERRO: Salário Base deve ser maior que 0");
-        } else {
+        if (salarioBase > 0) {
             this.salarioBase = salarioBase;
+        } else {
+            System.out.println("ERRO: O salário-base deve ser maior que zero.");
         }
-
     }
 
-    public double calcularSalario(){
+    public double calcularSalario() {
         return salarioBase;
     }
 
-    public void apresentarDados(){
-        System.out.println("NOme: " + nome);
+    public void apresentarDados() {
+        System.out.println("----------------------------------------");
+        System.out.println("Nome: " + nome);
         System.out.println("Matrícula: " + matricula);
-        System.out.printf("Salário Base: R$ &.2f%n", salarioBase);
+        System.out.printf("Salário Base: R$ %.2f%n", salarioBase);
     }
-
-
 }

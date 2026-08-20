@@ -1,24 +1,24 @@
-package AT07;
+package AT07.AT07;
 
-public class Vendedor extends Funcionario{
-    private double valorVenda;
+public class Vendedor extends Funcionario {
+    private double valorVendas;
     private double percentualComissao;
 
-    public Vendedor(String nome, int matricula, double salarioBase, double valorVenda, double percentualComissao) {
+    public Vendedor(String nome, int matricula, double salarioBase, double valorVendas, double percentualComissao) {
         super(nome, matricula, salarioBase);
-        this.valorVenda = valorVenda;
-        this.percentualComissao = percentualComissao;
+        setValorVendas(valorVendas);
+        setPercentualComissao(percentualComissao);
     }
 
-    public double getValorVenda() {
-        return valorVenda;
+    public double getValorVendas() {
+        return valorVendas;
     }
 
-    public void setValorVenda(double valorVenda) {
-        if (valorVenda <= 0){
-            System.out.println("ERRO: Valor de venda deve ser maior que zero.");
+    public void setValorVendas(double valorVendas) {
+        if (valorVendas < 0) {
+            System.out.println("ERRO: O valor das vendas não pode ser negativo.");
         } else {
-            this.valorVenda = valorVenda;
+            this.valorVendas = valorVendas;
         }
     }
 
@@ -27,26 +27,28 @@ public class Vendedor extends Funcionario{
     }
 
     public void setPercentualComissao(double percentualComissao) {
-        if (percentualComissao < 0 || percentualComissao > 100){
-            throw new IllegalArgumentException(
-                    "O percentual de comissão deve estar entre 0 e 100."
-            );
+        if (percentualComissao >= 0 && percentualComissao <= 100) {
+            this.percentualComissao = percentualComissao;
+        } else {
+            System.out.println("ERRO: O percentual de comissão deve estar entre 0 e 100.");
         }
-        this.percentualComissao = percentualComissao;
+    }
+
+    public double calcularComissao() {
+        return valorVendas * (percentualComissao / 100);
+    }
+
+    public void registrarVenda() {
+        System.out.println("O vendedor " + getNome() + " registrou uma nova venda.");
     }
 
     @Override
     public void apresentarDados() {
         System.out.println("Cargo: Vendedor");
         super.apresentarDados();
-
-        System.out.printf("Valor de vendas: R$ %.2f%n", valorVenda);
+        System.out.printf("Valor de vendas: R$ %.2f%n", valorVendas);
         System.out.printf("Percentual de comissão: %.2f%%%n", percentualComissao);
-        System.out.printf("Valor da comissão: R$%.2f%n", calcularComissao());
-    }
-
-    public double calcularComissao(){
-        return getSalarioBase() + percentualComissao / 100;
+        System.out.printf("Valor da comissão: R$ %.2f%n", calcularComissao());
     }
 
     @Override
